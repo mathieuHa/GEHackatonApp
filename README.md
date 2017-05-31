@@ -1,9 +1,12 @@
 # minds-machines-europe
 
+## Challenge details
+The hackathon challenge and all logistics can be found here: https://mindsmachinesberlin.devpost.com/ 
+Completed projects are due at 2pm Tuesday June 13th and must be submitted here: https://mindsmachinesberlin.devpost.com/submissions
+This requires you create a devpost account in order to be eligble for a prize. 
+
 
 ## Time Series Data for Hackathon
-This document provides details on the data that can be used for Minds and Machines Hackathon June 2017 in Berlin. This document is not intended to provide details of the hackathon challenge and assumes that the users are provided with the details of the challenge.
-
 A predix time series instance is set up and contains the data that can be used during the hackathon to build applications. For more information about time series, follow the documentation on predix.io (https://docs.predix.io/en-US/content/service/data_management/time_series/). This data available for hackathon is readonly.
 
 

@@ -4,153 +4,86 @@
 The hackathon challenge and all logistics can be found here: https://mindsmachinesberlin.devpost.com/ 
 Completed projects are due at 2pm Tuesday June 13th and must be submitted here: https://mindsmachinesberlin.devpost.com/submissions
 This requires you create a devpost account in order to be eligble for a prize. 
+Electrification
+
+Europe is looking to lead the way to decarbonizing its economy and setting a global example. From the energy sector to advanced manufacturing and sustainable energy use, Europe is pushing the boundaries to drive sustainability and deliver better value. Develop new solutions on Predix to take decarbonization to the next level.
+
+2 categories:
+
+##1.	Electrification 
+Presented by EURELECTRIC, EHPA
+
+Europe’s energy sector is poised for disruption and decarbonization.  Electric Vehicles, distributed renewable energy, and electric building heating can drive decarbonization and economic value.  The grid needs to keep up!  Build a solution on Predix to help drive electrification and evaluate the impact on the electric grid & decarbonization. 
+
+Examples:  
+•	Grid infrastructure mapping
+•	Rooftop PV siting
+•	Load forecasting & temperature correction on distribution circuits
+•	Electric heating & conversion to heat pumps 
+•	Renewable energy integration 
+ 
+Grid Infrastructure Mapping
+To adapt to and enable the decarbonization of Europe’s electric sector, grid infrastructure will require investment from basic modification and expansion to modernization and digitization.  The electric grid has been built up over more than a century into today’s network of infrastructure.  Utilities themselves don’t have full visibility into the details of the vast infrastructure that has been deployed over the years.  Help utilities like ESB leverage modern data sources and automation to evaluate their physical infrastructure to enable greater penetration of electric vehicles, renewables, and electrification.
+
+Data and services provided:
+•	ESB data set describing infrastructure and locations
+•	GE geospatial and mapping services
+•	Images of infrastructure
+•	The world wide web (hint:  think streetview)
+
+Approach:
+•	Load ESB data into GE geospatial platform
+•	“Drive” through region using streeview
+•	Identify ESB infrastructure in streetview
+•	Confirm location and inclusion in ESB data set
+•	Display an alarm where there is a mismatch between streetview images and ESB records
+•	Create the capability to add the identified infrastructure to the ESB data set by the identification of ESB assets on the street such as Low Voltage poles and Vaulted Minipillars (e.g. by using ‘facial ‘recognition)
 
 
-## Time Series Data for Hackathon
-A predix time series instance is set up and contains the data that can be used during the hackathon to build applications. For more information about time series, follow the documentation on predix.io (https://docs.predix.io/en-US/content/service/data_management/time_series/). This data available for hackathon is readonly.
+Rooftop PV Siting
+As costs of solar energy continue to plummet, more and more households are going solar.  This puts additional stress on the grid.  Use google maps to identify where PV is installed, and add these assets as a layer of data in a system to help utilities visualize energy generation and consumption on their grid.
+
+Data and services provided:
+•	GE geospatial and mapping services
+•	The world wide web (hint:  satellite mapping images)
+
+Approach
+•	Use satellite data to identify existing roof mounted solar installations
+•	Identify coordinates  to facilitate addition to ESB GIS system
+Represent solar installations as a data layer in the GE geospatial and mapping services, and calculate the peak power production on a daily basis based on roof orientation, amount of solar installed and weather data.
+
+Load Forecasting & Temperature Correction on Distribution Circuits
+Adding renewables, electric vehicles, electric heating and other loads to the electric grid to drive decarbonization will increase congestion on the grid.  It will become more and more critical to have accurate forecasting of demand for power and load on circuits.  Help ESB develop an algorithm that can more accurately predict load based on how heating demands are impacted by the weather.
+
+Data and services provided
+•	ESB historic time series data on load at medium-voltage outlets – outlets are categorized as mainly residential, mainly industrial/Commerical or a mixture of load categories
+•	Historic meteorological data
+
+Approach
+•	Show time series meteorological data and load data
+•	Control for distribution of consumer types
+•	Determine relationship between meteorological data and load, accounting for consumer types and time lag between weather and energy consumption
+•	Back test algorithm
+•	Apply algorithm to forecasts
 
 
-## Environment Details for Accessing Time Series Data
-Time series data can be accessed programatically using Time Series Client Library and the documentation is provided under https://docs.predix.io/en-US/content/service/data_management/time_series/using-the-time-series-client-library. To access the time series instance, we need the following information.
+Heat Pump Penetration & Impact on Electric Load
 
-* UAA to perform authentication and to get authentication token
-* Time Series Instance details to access time series using the obtained authentication token.
+Driving toward a low-carbon future will require the conversion of building heating to electricity, and driving electricity generation to renewables.  Create a tool that determines the increased electric load from the operation of a heat pump, and from increased penetration of heat pumps in a given region.
 
-The following UAA and Time Series details are needed for the data retrieval.
+Data provided:
+•	Heat pump data (what columns of data required?)
+•	Weather sources from the world wide web
 
-* **UAA URL**: https://mmberlin.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token
-* **Client Name**: timeseries_client_readonly
-* **Client Password**: MMBerlin
-* **TimeSeries Query URL**: https://time-series-store-predix.run.aws-usw02-pr.ice.predix.io/v1/
-  * **Query tags**: https://time-series-store-predix.run.aws-usw02-pr.ice.predix.io/v1/tags
-  * **Query datapoints**: https://time-series-store-predix.run.aws-usw02-pr.ice.predix.io/v1/datapoints
-* **Timeseries Predix-Zone-Id**: cd7efa2c-881c-4d12-9e80-ceb03d4499ee
+Approach:
+•	Create an algorithm that correlates energy consumption and instantaneous power consumed with ambient temperature using the data set provided (which columns?)
+•	Apply the algorithm to statistical distributions of ambient temperature for areas of interest to estimate the increased energy consumption and peak power consumption for increasing the penetration of heat pumps from the EU average of 10% to penetration levels specified by user input
 
-The time series connection can be verified quickly using the predix starter kit (https://predix-toolkit.run.aws-usw02-pr.ice.predix.io), prior to using the predix client libraries in the code.
+Other ideas:
 
-## Time Series Query
-The following is a sample query to retieve the data using one of the tags
+•	Predication tool that integrates weather data, comfort level of the user, and behavior of the heat pump under different climate conditions
+•	Improve or maximize/minimize consumption or the comfort level of the user
+•	Detect precursor signals before an incident on the equipment (predictive maintenance) or monitor a potential decrease in the equipment performance.
+•	Heat pump penetration & impact on load
+•	Demand response potential (TBD)
 
-
-{  
-
-  "start":"2y-ago",
-
-   "tags":[
-
-      {  
-
-         "name":"LoadForecasting/LoadData/Knockroe/DC14",
-
-         "order":"desc",
-
-      }
-
-   ]
-
-}
-
-
-The following are the available tags in time series for the query:
-* LoadForecasting/LoadData/Knockroe/DC14
-* LoadForecasting/LoadData/Knockroe/LE17
-* LoadForecasting/LoadData/Knockroe/TC12
-* LoadForecasting/LoadData/Letterkenny_Dromore/CC15
-* LoadForecasting/LoadData/Letterkenny_Dromore/CC18
-* LoadForecasting/LoadData/Letterkenny_Dromore/GC13
-* LoadForecasting/LoadData/Malahide_Castle/MC14
-* LoadForecasting/LoadData/Malahide_Castle/MC18
-* LoadForecasting/LoadData/Malahide_Castle/MC21
-* LoadForecasting/LoadData/Mullingar/MC12
-* LoadForecasting/LoadData/Mullingar/MC13
-* LoadForecasting/LoadData/Mullingar/MC14
-* LoadForecasting/LoadData/Mullingar/MC18
-* LoadForecasting/LoadData/Mullingar/MC19
-* LoadForecasting/LoadData/Mullingar/MC21
-* LoadForecasting/LoadData/Mullingar/MC24
-* LoadForecasting/LoadData/Mullingar/MC25
-* LoadForecasting/LoadData/Shannon_Airport_Area/RC11
-* LoadForecasting/LoadData/Shannon_Airport_Area/RC14
-* LoadForecasting/LoadData/Shannon_Airport_Area/RC15
-* LoadForecasting/LoadData/Shannon_Airport_Area/RC16
-* LoadForecasting/LoadData/Shannon_Airport_Area/RC17
-* LoadForecasting/LoadData/Shannon_Airport_Area/RC19
-* LoadForecasting/LoadData/Shannon_Airport_Area/RC20
-* LoadForecasting/LoadData/Shannon_Airport_Area/RC22
-* LoadForecasting/LoadData/Shannon_Airport_Area/SC14
-* LoadForecasting/LoadData/Shannon_Airport_Area/SC15
-* LoadForecasting/LoadData/Shannon_Airport_Area/SC16
-* LoadForecasting/LoadData/Shannon_Airport_Area/SC17
-* LoadForecasting/LoadData/Shannon_Airport_Area/SC18
-* LoadForecasting/LoadData/Shannon_Airport_Area/SC22
-* LoadForecasting/LoadData/Shannon_Airport_Area/SC24
-* LoadForecasting/WeatherData/Knockroe/dewpt
-* LoadForecasting/WeatherData/Knockroe/irain
-* LoadForecasting/WeatherData/Knockroe/itemp
-* LoadForecasting/WeatherData/Knockroe/iwb
-* LoadForecasting/WeatherData/Knockroe/iwddir
-* LoadForecasting/WeatherData/Knockroe/iwdsp
-* LoadForecasting/WeatherData/Knockroe/msl
-* LoadForecasting/WeatherData/Knockroe/rain
-* LoadForecasting/WeatherData/Knockroe/rhum
-* LoadForecasting/WeatherData/Knockroe/temp
-* LoadForecasting/WeatherData/Knockroe/vappr
-* LoadForecasting/WeatherData/Knockroe/wddir
-* LoadForecasting/WeatherData/Knockroe/wdsp
-* LoadForecasting/WeatherData/Knockroe/wetb
-* LoadForecasting/WeatherData/Letterkenny_Dromore/dewpt
-* LoadForecasting/WeatherData/Letterkenny_Dromore/irain
-* LoadForecasting/WeatherData/Letterkenny_Dromore/itemp
-* LoadForecasting/WeatherData/Letterkenny_Dromore/iwb
-* LoadForecasting/WeatherData/Letterkenny_Dromore/iwddir
-* LoadForecasting/WeatherData/Letterkenny_Dromore/iwdsp
-* LoadForecasting/WeatherData/Letterkenny_Dromore/msl
-* LoadForecasting/WeatherData/Letterkenny_Dromore/rain
-* LoadForecasting/WeatherData/Letterkenny_Dromore/rhum
-* LoadForecasting/WeatherData/Letterkenny_Dromore/temp
-* LoadForecasting/WeatherData/Letterkenny_Dromore/vappr
-* LoadForecasting/WeatherData/Letterkenny_Dromore/wddir
-* LoadForecasting/WeatherData/Letterkenny_Dromore/wdsp
-* LoadForecasting/WeatherData/Letterkenny_Dromore/wetb
-* LoadForecasting/WeatherData/Malahide_Castle/dewpt
-* LoadForecasting/WeatherData/Malahide_Castle/irain
-* LoadForecasting/WeatherData/Malahide_Castle/itemp
-* LoadForecasting/WeatherData/Malahide_Castle/iwb
-* LoadForecasting/WeatherData/Malahide_Castle/iwddir
-* LoadForecasting/WeatherData/Malahide_Castle/iwdsp
-* LoadForecasting/WeatherData/Malahide_Castle/msl
-* LoadForecasting/WeatherData/Malahide_Castle/rain
-* LoadForecasting/WeatherData/Malahide_Castle/rhum
-* LoadForecasting/WeatherData/Malahide_Castle/temp
-* LoadForecasting/WeatherData/Malahide_Castle/vappr
-* LoadForecasting/WeatherData/Malahide_Castle/wddir
-* LoadForecasting/WeatherData/Malahide_Castle/wdsp
-* LoadForecasting/WeatherData/Malahide_Castle/wetb
-* LoadForecasting/WeatherData/Mullingar/dewpt
-* LoadForecasting/WeatherData/Mullingar/irain
-* LoadForecasting/WeatherData/Mullingar/itemp
-* LoadForecasting/WeatherData/Mullingar/iwb
-* LoadForecasting/WeatherData/Mullingar/iwddir
-* LoadForecasting/WeatherData/Mullingar/iwdsp
-* LoadForecasting/WeatherData/Mullingar/msl
-* LoadForecasting/WeatherData/Mullingar/rain
-* LoadForecasting/WeatherData/Mullingar/rhum
-* LoadForecasting/WeatherData/Mullingar/temp
-* LoadForecasting/WeatherData/Mullingar/vappr
-* LoadForecasting/WeatherData/Mullingar/wddir
-* LoadForecasting/WeatherData/Mullingar/wdsp
-* LoadForecasting/WeatherData/Mullingar/wetb
-* LoadForecasting/WeatherData/Shannon_Airport_Area/dewpt
-* LoadForecasting/WeatherData/Shannon_Airport_Area/irain
-* LoadForecasting/WeatherData/Shannon_Airport_Area/itemp
-* LoadForecasting/WeatherData/Shannon_Airport_Area/iwb
-* LoadForecasting/WeatherData/Shannon_Airport_Area/iwddir
-* LoadForecasting/WeatherData/Shannon_Airport_Area/iwdsp
-* LoadForecasting/WeatherData/Shannon_Airport_Area/msl
-* LoadForecasting/WeatherData/Shannon_Airport_Area/rain
-* LoadForecasting/WeatherData/Shannon_Airport_Area/rhum
-* LoadForecasting/WeatherData/Shannon_Airport_Area/temp
-* LoadForecasting/WeatherData/Shannon_Airport_Area/vappr
-* LoadForecasting/WeatherData/Shannon_Airport_Area/wddir
-* LoadForecasting/WeatherData/Shannon_Airport_Area/wdsp
-* LoadForecasting/WeatherData/Shannon_Airport_Area/wetb"

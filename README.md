@@ -58,11 +58,11 @@ Adding renewables, electric vehicles, electric heating and other loads to the el
 - Historic meteorological data
 
 ##### Approach
--Show time series meteorological data and load data
--Control for distribution of consumer types
--Determine relationship between meteorological data and load, accounting for consumer types and time lag between weather and energy consumption
--Back test algorithm
--Apply algorithm to forecasts
+- Show time series meteorological data and load data
+- Control for distribution of consumer types
+- Determine relationship between meteorological data and load, accounting for consumer types and time lag between weather and energy consumption
+- Back test algorithm
+- Apply algorithm to forecasts
 
 
 ### Heat Pump Penetration & Impact on Electric Load

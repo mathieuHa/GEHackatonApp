@@ -15,11 +15,11 @@ Presented by EURELECTRIC, EHPA
 Europe’s energy sector is poised for disruption and decarbonization.  Electric Vehicles, distributed renewable energy, and electric building heating can drive decarbonization and economic value.  The grid needs to keep up!  Build a solution on Predix to help drive electrification and evaluate the impact on the electric grid & decarbonization. 
 
 Examples:  
--Grid infrastructure mapping
--Rooftop PV siting
--Load forecasting & temperature correction on distribution circuits
--Electric heating & conversion to heat pumps 
--Renewable energy integration 
+- Grid infrastructure mapping
+- Rooftop PV siting
+- Load forecasting & temperature correction on distribution circuits
+- Electric heating & conversion to heat pumps 
+- Renewable energy integration 
  
 #### Grid Infrastructure Mapping
 To adapt to and enable the decarbonization of Europe’s electric sector, grid infrastructure will require investment from basic modification and expansion to modernization and digitization.  The electric grid has been built up over more than a century into today’s network of infrastructure.  Utilities themselves don’t have full visibility into the details of the vast infrastructure that has been deployed over the years.  Help utilities like ESB leverage modern data sources and automation to evaluate their physical infrastructure to enable greater penetration of electric vehicles, renewables, and electrification.

@@ -34,8 +34,9 @@ You can combine this data with any other relevant data accessible on the web. Fo
 ## How to access the dataset?
 This data is accessible in two formats:
 - A Predix Time series instance that you can access read-only using the following references:
-  - UAA URL: XXXX
-  - ClientID:XXXX
-  - Client Secret:XXXX
-  - Timeseries ZoneID:XXXX
+  - UAA URL: https://MMEurope.predix-uaa.run.aws-usw02-pr.ice.predix.io
+  - ClientID: timeseries_client_readonly
+  - Client Secret: secret
+  - Timeseries ZoneID: 6e5d6150-f172-49f4-9867-24e8b47112da
+
 - CSV files on Hackathon GitHub repo for a preliminary exploration. Please note that your prototype should be deployed on Predix and access data from Predix.

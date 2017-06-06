@@ -39,4 +39,4 @@ This data is accessible in two formats:
   - Client Secret: secret
   - Timeseries ZoneID: 6e5d6150-f172-49f4-9867-24e8b47112da
 
-- CSV files on Hackathon GitHub repo for a preliminary exploration. Please note that your prototype should be deployed on Predix and access data from Predix.
+- A sample CSV file for year 2013 on the Hackathon GitHub repo to perform a preliminary exploration. Please note that your prototype should be deployed on Predix and access data from Predix.

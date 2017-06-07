@@ -7,8 +7,6 @@ Completed projects are due at 2pm Tuesday June 13th and must be submitted here: 
 
 This requires you create a devpost account in order to be eligible for a prize. 
 
-####Electrification
-
 Europe is looking to lead the way to decarbonizing its economy and setting a global example. From the energy sector to advanced manufacturing and sustainable energy use, Europe is pushing the boundaries to drive sustainability and deliver better value. Develop new solutions on Predix to take decarbonization to the next level.
 
 ### 2 categories:

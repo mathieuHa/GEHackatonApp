@@ -28,4 +28,6 @@ A data dictionary and several tables (references, 1st industrialization) with re
 ## How to access the dataset?
 - The dataset is a CSV file that you can download from the Hackathon GitHub repo.
 - This file has been loaded in a blobstore instance that you can access from your app using the following information:
-  - Blobstore URL:
+  - URL : https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io
+  - *Get* list of files in blobstore : https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io/v1/list
+  - *Get* file in blobstore : https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io/v1/blob/{FILENAME}

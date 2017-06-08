@@ -27,6 +27,8 @@ In your space you are going to see multiple services :
 
 #### MMEurope-uaa
 
+The User Account and Authentication Service (UAA) is an OAuth2 server that can be used for centralized identity management. You can see the [documentation](https://docs.predix.io/en-US/content/service/security/user_account_and_authentication/).
+
 We already created one client and one user :
 * **Client ID** : client
 * **Client Secret** : Secret
@@ -44,7 +46,7 @@ GE Energy Connections provides a mapping services on Predix:
 
 We already ingest GIS geojson [data](https://github.com/PredixDev/minds-machines-europe/tree/GIS_geojson_data/Electrification%20Challenge/Grid%20GIS%20Dataset).
 
-If you want to access to this data, you can read this documentation : [Link](https://sw-intelligent-mapping.github.io/smallworld-mapping-services/#MappingServices/IMSapis.htm%3FTocPath%3DGetting%2520started%2520with%2520Intelligent%2520Mapping%2520and%2520Dynamic%2520Mapping%2520services%7C_____8)
+If you want to access to this data, you can read this [documentation](https://sw-intelligent-mapping.github.io/smallworld-mapping-services/#MappingServices/IMSapis.htm%3FTocPath%3DGetting%2520started%2520with%2520Intelligent%2520Mapping%2520and%2520Dynamic%2520Mapping%2520services%7C_____8)
 
 **NB:** x-subtenant-id or subtenantId is the same id that your intelligent Mapping service Zone Id
 

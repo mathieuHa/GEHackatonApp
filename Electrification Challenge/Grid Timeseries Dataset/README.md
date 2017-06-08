@@ -59,9 +59,9 @@ Timeseries dataset characteristics:
 ## How to access the dataset?
 This data is accessible in two formats:
 - A Predix Time series instance that you can access read-only using the following references:
-  - UAA URL: https://mmberlin.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token
+  - UAA URL: https://MMEurope.predix-uaa.run.aws-usw02-pr.ice.predix.io
   - ClientID: timeseries_client_readonly
-  - Client Secret: MMBerlin
-  - Timeseries ZoneID: cd7efa2c-881c-4d12-9e80-ceb03d4499ee
+  - Client Secret: secret
+  - Timeseries ZoneID: 3464894c-1cf7-440f-8f5c-a27314e35066
 
 - CSV files on Hackathon GitHub repo for a preliminary exploration. Please note that your prototype should be deployed on Predix and access data from Predix.

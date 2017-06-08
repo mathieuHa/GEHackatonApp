@@ -31,13 +31,13 @@ The provided dataset is a grid model from ESB for a portion of the Irish grid wi
 ## How to access the dataset?
 The ESB grid model sample data has been loaded in an Intelligent Mapping service instance pre-provisionned in your team space on Predix. This service is bound to a User Account and Authentication server (UAA) instance also created in your team space. In this UAA instance we created a UAA Client dedicated to manage the access to your Intelligent Mapping instance.
 Here are the credentials for this UAA Client:
-- ClientID: XXXX
-- Client secret: XXXX
+- ClientID: client
+- Client secret: secret
 
 Your team space has also been pre-provisionned with a seed app that is already bound to your Intelligent Mapping service instance for a basic visualization.
 You can test this Intelligent Mapping seed app using the dedicated UAA User credentials below:
-- UserID: XXXX
-- User secret: XXXX
+- UserID: TEAM_#
+- User secret: TEAM_#
 
 **NB:** If you corrupted the ESB data in your Intelligent Mapping service instance you can reach out to the Hackathon tech staff to reset your instance.
 

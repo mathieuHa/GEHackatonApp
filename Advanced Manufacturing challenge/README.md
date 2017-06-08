@@ -59,3 +59,4 @@ A data dictionary and several tables (references, 1st industrialization) with re
          **Required:**
 
          `filename=[string]`
+   - For more information about interacting with Blobstore : [tutorial](https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=1931&tag=1922&journey=Exploring%20Blobstore) & [documentation](https://docs.predix.io/en-US/content/service/data_management/blobstore/)

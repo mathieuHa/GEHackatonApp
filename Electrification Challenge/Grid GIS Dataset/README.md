@@ -35,7 +35,7 @@ Here are the credentials for this UAA Client:
 - Client secret: secret
 
 Your team space has also been pre-provisionned with a seed app that is already bound to your Intelligent Mapping service instance for a basic visualization.
-You can test this Intelligent Mapping seed app using the dedicated UAA User credentials below:
+You can test this Intelligent Mapping seed app using the dedicated UAA User credentials below (replace # with your team number):
 - UserID: TEAM_#
 - User secret: TEAM_#
 

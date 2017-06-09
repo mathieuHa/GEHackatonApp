@@ -1,4 +1,4 @@
-# Minds and Machines Berlin Hackathon 2017
+# Minds and Machines Europe Hackathon 2017
 # Electrification Challenge - Grid GIS Dataset
 
 ## Who is ESB?

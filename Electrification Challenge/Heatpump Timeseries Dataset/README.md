@@ -1,4 +1,4 @@
-# Minds and Machines Berlin Hackathon 2017
+# Minds and Machines Europe Hackathon 2017
 # Electrification Challenge - EHPA & Fraunhofer Dataset
 
 ## Who are EHPA and Franhofer?
@@ -11,6 +11,7 @@ https://www.fraunhofer.de/
 
 
 ## What is the challenge?
+
 Driving toward a low-carbon future will require the conversion of building heating to electricity, and driving electricity generation to renewables. The insertion of renewable energy in the power distribution system create new challenges such as more load / voltage fluctuation. Industrial players in the energy sector need new tools to study the impact of an increase in heatpump usage in the grid.
 
 Here are few leads to build your tool:
@@ -24,6 +25,7 @@ Here are few leads to build your tool:
 
 
 ## What's in the dataset?
+
 3 years (2011 - 2013) operations data with 1-minute granularity for 3 heatpumps based in Germany: electrical and thermal signals measured on different parts of the system. **A field description file is also provided.**
 
 You can combine this data with any other relevant data accessible on the web. For instance the flowing sources can be useful:
@@ -32,6 +34,7 @@ You can combine this data with any other relevant data accessible on the web. Fo
 - https://www.wunderground.com/weather/api/
 
 ## How to access the dataset?
+
 This data is accessible in two formats:
 - A Predix Time series instance that you can access read-only using the following references:
   - UAA URL: https://MMEurope.predix-uaa.run.aws-usw02-pr.ice.predix.io
@@ -39,4 +42,4 @@ This data is accessible in two formats:
   - Client Secret: secret
   - Timeseries ZoneID: 6e5d6150-f172-49f4-9867-24e8b47112da
 
-- A sample CSV file "minute_data_88433_2013.csv" for year 2013 on the Hackathon GitHub repo to perform a preliminary exploration. Please note that your prototype should be deployed on Predix and access data from Predix.
+- The original CSV files on the Hackathon GitHub repo to perform a preliminary exploration. Please note that your prototype should be deployed on Predix and access data from Predix.

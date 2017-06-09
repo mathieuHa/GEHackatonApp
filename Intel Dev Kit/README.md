@@ -1,4 +1,4 @@
-# Minds and Machines Berlin Hackathon 2017
+# Minds and Machines Europe Hackathon 2017
 # Intel Dev Kit Documentation
 
 ## What is Intel NUC?
@@ -8,7 +8,7 @@ The Intel® NUC is a powerful 4x4-inch mini PC with entertainment, gaming, and p
 
 ## What is the challenge?
 
-Your mission is to address one of the problematics related to Electrification or Advanced Manufacturing challenges. To boost your project prototype you can add a concrete hardware part to your solution. For instance you can build a heatpump simulator using the Kit to generate real-time temperature data and use it in your Predix cloud space.
+Your mission is to address one of the problematics related to Electrification or Advanced Manufacturing challenges. To boost your project prototype you can add a connected hardware part to your solution. For instance you can build a heatpump simulator using the Kit to generate real-time temperature data and use it in your Predix cloud space.
 
 ## What is your team provided with?
 

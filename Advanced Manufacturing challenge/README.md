@@ -1,4 +1,4 @@
-# Minds and Machines Berlin Hackathon 2017
+# Minds and Machines Europe Hackathon 2017
 # Advanced Manufacturing Challenge - Stelia Aerospace Dataset
 
 ## Who is Stelia?

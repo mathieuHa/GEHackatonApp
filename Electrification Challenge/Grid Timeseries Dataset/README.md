@@ -1,19 +1,22 @@
-# Minds and Machines Berlin Hackathon 2017
+# Minds and Machines Europe Hackathon 2017
 # Electrification Challenge - Grid Timeseries Dataset
 
 ## Who is ESB?
+
 Electricity Supply Board (ESB) was established in 1927 as a statutory corporation in the Republic of Ireland under the Electricity (Supply) Act 1927. With a holding of 95%, ESB is majority owned by the Irish Government with the remaining 5% held by the trustees of an Employee Share Ownership Plan.  
 
 As a strong, diversified, vertically integrated utility, ESB operates right across the electricity market: from generation, through transmission and distribution to supply. In addition, ESB extracts further value at certain points along this chain: supplying gas, using our networks to carry fibre for telecommunications, developing electric vehicle public charging infrastructure and more.
 
 
 ## What is the challenge?
+
 Adding renewables, electric vehicles, electric heating and other loads to the electric grid to drive decarbonization will increase congestion on the grid. It will become more and more critical to have accurate forecasting of demand for power and load on circuits. The fundamental determinant for electrical load is outdoor temperature.
 
-Help ESB develop an algorithm that can more accurately predict load based on how heating demands are impacted by the weather.
+Help ESB develop an algorithm that can more accurately predict load based on type of load and on how heating demands are impacted by the weather.
 
 
 ## What's in the dataset?
+
 This dataset gathers electrical load data and weather data for the following substations:
 - Knockroe
 - Letterkenny_Dromore
@@ -31,8 +34,11 @@ Timeseries dataset characteristics:
 - Timestep: 30 minutes
 - All tags are a current measurement expressed in AMPS
 
+NB: you can find each feeder voltage level in the original files in the data folder.
+
 
 ### Historic data from the Irish Meteorological Service
+
 You can find detailed field description in the "KeyHourly.txt" file in the "WeatherData" folder.
 
 For each substation the available weather data tags are:
@@ -57,6 +63,7 @@ Timeseries dataset characteristics:
 - Timestep: 1 hour
 
 ## How to access the dataset?
+
 This data is accessible in two formats:
 - A Predix Time series instance that you can access read-only using the following references:
   - UAA URL: https://MMEurope.predix-uaa.run.aws-usw02-pr.ice.predix.io

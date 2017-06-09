@@ -17,7 +17,7 @@ Stelia main activity is to produce Elementary Parts (EP) to be assembled in work
 This challenge is about on time delivery (OTD) management. Stelia would strongly benefit from new tools and services to improve the accuracy of Elementary Parts preparation schedules.
 Each EP requires a different processing time depending on its geometrical complexity. The geometrical complexity is measured with an index.
 
-You can choose between two sub-challenges:
+You can choose between two problematics:
 1. Basic: Build a model to estimate the EP references preparation milestone dates.
 2. Advanced: Build a tool to compute the optimal EP preparation schedule. This is a queue management optimization problem. Please note that to solve this advanced challenge you will need to use the kind of model built from the first sub-challenge (delay estimation model).
 
@@ -94,7 +94,7 @@ For each each preparation step queue and each timestep:
 - the processing capacity
 =======
   - URL : https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io
-  - You can also do queries on this URL : 
+  - You can also do queries on this URL :
     - **List files**
 
       Returns list of files in blobstore.

@@ -19,7 +19,7 @@ Your team can also take up a **Developer Kit** complementary challenge using Int
 
 ## Electrification Challenge
 
-Presented by EURELECTRIC and EHPA
+*Presented by EURELECTRIC and EHPA*
 
 Electric vehicles, distributed renewable energy, and electric building heating can drive decarbonization and economic value.  The grid needs to keep up!  Innovate solutions for electrification, and evaluate decarbonization impact. Sample solutions: Renewable energy resource siting; electric heating & conversion to heat pumps analysis; EV charger siting; renewable energy integration.
 
@@ -33,7 +33,7 @@ You can find detailed information about one dataset inside its dedicated folder.
 
 ## Advanced Manufacturing Challenge
 
-Presented by Stelia Aerospace
+*Presented by Stelia Aerospace*
 
 Reducing the weight of aircraft components can drastically reduce fuel consumption and carbon emissions. This implies manufacturing a new generation of aeronautics elementary parts. Access manufacturing data to optimize manufacturing processes, and decarbonize flight by accelerating the commissioning of a new generation of aircrafts. Sample solutions: Forecast manufacturing delays based on parts complexity; detect delay drifts and optimize critical production rescheduling.
 
@@ -44,3 +44,11 @@ Two problematics are proposed with an increasing level of complexity:
 - **Advanced problematic** build an optimization tool that models Stelia queue management problem to compute the best production schedule
 
 **Teams choosing to tackle the Advanced problematic will have more chance to win the Advanced Manufacturing challenge.**
+
+## Developer Kit
+
+*Presented by Intel*
+
+Your mission is to address one of the problematics related to Electrification or Advanced Manufacturing challenges. To boost your project prototype you can add a connected hardware part to your solution. For instance you can build a heatpump simulator using the Kit to generate real-time temperature data and use it in your Predix cloud space.
+
+You can find detailed information in the "Intel Dev Kit" folder in this repo.

@@ -1,87 +1,0 @@
-Tab;Title;Type donnée;Meaning;Signification
-Tous;id_reference;Nombre;Reference number;identification de la référence
-Table_Reference;type_reference;Texte;"Kind of reference : - PE = Piece without equipment- PE Equipée = Piece with equipment- SS Ensemble = Assembly of parts with or without equipment";"Type de référence : - PE = Pièce sans équipement- PE Equipée = Pièce avec équipement- SS Ensemble = Assemblage de pièces avec ou sans équipement"
-Table_Reference;designation;Texte;Reference name;Dénomination de la référence
-Table_Reference;programme;Texte;Aircraft program;Programme avion, décomposé en sous-ensemble
-Table_Reference;code_filiere;Texte;Technologie utilisée pour la pièce;Technologie utilisée pour la pièce
-Table_Reference;type_lot;Texte;"Maturity level of the definition:- Lot 2* = Definition not finalized- Lot 3 = Definition  finalized";"Niveau de maturité de la définition :- Lot 2* = définition non finalisée- Lot 3 = définition finalisée"
-Table_Reference;coeff_avion;Nombre;Number of pieces to be assemble by airplane;Nombre de pièces à monter par avion
-Table_Reference;avion_impacte;Texte;First program aircraft using this reference;Premier avion du programme faisant appel à cette référence
-Table_Reference;longueur_piece_brut_mm;Nombre;Length of the raw material needed to machine the workpiece;Dimensions de la matière première nécessaire pour usiner la pièce
-Table_Reference;largeur_piece_brut_mm;Nombre;Width of the raw material needed to machine the workpiece;Dimensions de la matière première nécessaire pour usiner la pièce
-Table_Reference;epaisseur_brut_mm;Nombre;"Thickness of the raw material needed to machine the workpiece";Dimensions de la matière première nécessaire pour usiner la pièce
-Table_Reference;sens_de_fibrage;Texte;Orientation of raw material before machining;Orientation de la matière première avant usinage
-Table_Reference;debit_mm2;Nombre;Dimensions of the raw material needed to machine the workpiece;Dimensions de la matière première nécessaire pour usiner la pièce
-Table_Reference;complexite_piece;Texte;Indication on the level of complexity of the reference;Indication sur le niveau de complexité de la référence
-Table_Reference;statut;Texte;"Progress of reference:- 5 * = under preparation- 6 * = in the course of purchases- 7 * = during supplier production- 9 * = canceled or out of scope";"Avancement de la référence :- 5* = en cours de préparation- 6* = en cours d'achats- 7* = en cours de production fournisseur- 9* = annulée ou hors scope"
-Table_Reference;magasin;Texte;Physical storage location for pieces;Emplacement physique de stockage des pièces
-Table_Reference;date_reception_OMP;Date;Date of receipt of the order to put into production the reference (= start of work preparation preparation);Date de réception de l'ordre de mise en production de la référence (=début de travail du métier préparation)
-Table_Reference;date_besoin_client;Date;Date requested by the client at launch;Date souhaitée par le client lors du lancement
-Table_Reference;priorite;Texte;"Customer priority (P0 = emergency top / P3 = low emergency)";Priorité client (P0 = top urgence / P3 = faible urgence)
-Table_Reference;date_transmission_proc;Date;Date of transmission of the reference from preparation to purchases;Date de transmission de la référence du métier préparation au métier achats
-Table_Reference;livrable;Texte;"Information that the part is consumed directly by the customer";Information que la pièce est consommée directement par le client
-Table_Reference;constituant;Texte;Information that the part is consumed indirectly by the customer (called via an assembly of parts);Information que la pièce est consommée indirectement par le client (appelée via un assemblage de pièces)
-Table_Reference;famille_code_filiere;Texte;"Technology typology";Typologie de technologie
-Table_Reference;norm_mat_inge;Texte;Material standard;Norme matière
-Table_Reference;norm_mat_fab;Texte;Material standard;Norme matière
-Table_Reference;cms_mat;Texte;Material codification;Codification matière
-Table_Reference;indice_client;Texte;"Plan version";Version du plan
-Table_Reference;indice_manufacturing;Texte;Plan version;Version du plan
-Table_Reference;classe_piece_ref;Nombre;"Class of certification of the part (Class 1 = part requiring systematic inspection / Class 3 = light control)";Classe de certification de la pièce (Classe 1 = pièce nécessitant un contrôle systématique / Classe 3 = contrôle allégé)
-Table_Reference;procedes_speciaux_soumis_a_qualification;Texte;"Information on special processes (not verifiable after the finished part)";Information sur les procédés spéciaux (non vérifiables une fois la pièce finie)
-Table_Reference;codes_protections;Texte;Type of surface treatment to be applied to the parts;Type de traitement de surface à appliquer sur les pièces
-Table_Achat;fournisseur;Texte;"Supplier subcontractor in charge of the production of the part";Fournisseur sous-traitant en charge de la production de la pièce
-Table_Achat;indice_client;Texte;Plan version;Version du plan
-Table_Achat;autonomie_matiere;Texte;Matter to be supplied to the supplier or not;Matière à fournir au fournisseur ou pas
-Table_Achat;autonomie_quincaillerie;Texte;Matter to be supplied to the supplier or not;Equipements à fournir au fournisseur ou pas
-Table_Achat;quantite_FAI;Nombre;"Quantity of parts to be produced to validate the quality process";Quantité de pièces à produire pour valider le processus qualité
-Table_Achat;type_cycle;Texte;Speedshop (urgency) ou Standard;Speedshop (urgence) ou Standard
-Table_Achat;cycle_fil_rouge_1ere_commande;Nombre;Cycles negotiated with supplier;Cycles négociés avec le fournisseur
-Table_Achat;cycle_fil_rouge_recommande;Nombre;Cycles negotiated with supplier;Cycles négociés avec le fournisseur
-Table_Achat;NRC_fil_rouge_total;Nombre;Price of industrialization in speed shop;Prix d'industrialisation en speed shop
-Table_Achat;RC_fil_rouge;Nombre;Production price in speed shop;Prix de production en speed shop
-Table_Achat;cycle_standard_1ere_commande;Nombre;Cycles negotiated with supplier;Cycles négociés avec le fournisseur
-Table_Achat;cycle_standard_recommande;Nombre;Cycles negotiated with supplier;Cycles négociés avec le fournisseur
-Table_Achat;NRC_standard_total;Nombre;"Price of industrialization as standard";Prix d'industrialisation en standard
-Table_Achat;RC_standard;Nombre;Production price as standard;Prix de production en standard
-Table_Achat;devise;Texte;Currency;Devise
-Table_Achat;date_affectation;Date;Date of change from purchase to supply chain;Date de passage du métier achat au métier supply chain
-Table_Cmde_1st_Indus;fournisseur;Texte;Supplier subcontractor in charge of the production of the part;Fournisseur sous-traitant en charge de la production de la pièce
-Table_Cmde_1st_Indus;rang_appro;Nombre;Order iteration number (increment to each recommended);Numéro d'itération de la commande (incrément à chaque recommande)
-Table_Cmde_1st_Indus;indice_client;Texte;Plan version;Version du plan
-Table_Cmde_1st_Indus;usine;Texte;Factory consuming parts;Usine consommant les pièces
-Table_Cmde_1st_Indus;priorite;Texte;Customer priority (P0 = emergency top / P3 = low emergency);Priorité client (P0 = top urgence / P3 = faible urgence)
-Table_Cmde_1st_Indus;type_cycle;Texte;Speedshop (urgency) ou Standard;Speedshop (urgence) ou Standard
-Table_Cmde_1st_Indus;date_emission_commande;Date;Date of dispatch of the order to the supplier;Date d'envoi de la commande vers le fournisseur
-Table_Cmde_1st_Indus;quantite_commande;Nombre;Quantity of the first order;Quantité de la première commande
-Table_Cmde_1st_Indus;cycle_negocie;Nombre;Cycles negotiated with the supplier for the first order;Cycles négociés avec le fournisseur pour la première commande
-Table_Cmde_1st_Indus;date_prev_livraison_outillage;Date;Estimated date of delivery of the tool;date prev livraison outillage
-Table_Cmde_1st_Indus;date_reelle_livraison_outillage;Date;Real date of delivery of the tool;date reelle livraison outillage
-Table_Cmde_1st_Indus;date_prev_livraison_prog;Date;Estimated date of delivery of the program;date prev livraison prog
-Table_Cmde_1st_Indus;date_reelle_livraison_prog;Date;Real date of delivery of the tool;date reelle livraison prog
-Table_Cmde_1st_Indus;date_prev_livraison_indus;Date;date prev livraison indus;date prev livraison indus
-Table_Cmde_1st_Indus;date_reelle_livraison_indus;Date;date reelle livraison indus;date reelle livraison indus
-Table_Cmde_1st_Indus;type_lot;Texte;"Maturity level of the definition:- Lot 2 * = definition not finalized- Lot 3 = definition finalized";"Niveau de maturité de la définition :- Lot 2* = définition non finalisée- Lot 3 = définition finalisée"
-Table_Cmde_1st_Indus;date_prev_fin_usinage;Date;Estimated date of end of machining;date prev fin usinage
-Table_Cmde_1st_Indus;date_reelle_fin_usinage;Date;Real date of end of machining;date reelle fin usinage
-Table_Cmde_1st_Indus;lieu_TS;Texte;Surface Treatment Location;lieu Traitement de surface
-Table_Cmde_1st_Indus;date_prev_fin_TS;Date;estimated date of end of surface treatment ;date prev fin Traitement de surface
-Table_Cmde_1st_Indus;date_reelle_fin_TS;Date;real date of end of surface treatment ;date reelle fin Traitement de surface
-Table_Cmde_1st_Indus;date_prev_reception_QI_fournisseur;Date;Estimated date of receipt of supplier's hardware;date prev reception quincaillerie fournisseur
-Table_Cmde_1st_Indus;date_reelle_reception_QI_fournisseur;Date;Real date of receipt of supplier's hardware;date reelle reception quincaillerie fournisseur
-Table_Cmde_1st_Indus;lieu_equipement;Texte;Location equipment;lieu equipement
-Table_Cmde_1st_Indus;date_prev_fin_equipement;Date;"Estimated date of completion of equipment";date prev fin equipement
-Table_Cmde_1st_Indus;date_reelle_fin_equipement;Date;"Real date of completion of equipment";date reelle fin equipement
-Table_Cmde_1st_Indus;date_expedition;Date;Date of shipment from the supplier;date d'expedition de chez le fournisseur
-Table_Cmde_1st_Indus;quantite_expediee;Nombre;Quantity shipped by the supplier;quantite expediee par le fournisseur
-Table_Cmde_1st_Indus;date_livraison_contractuelle;Date;Date supplier's contractual delivery;date livraison contractuelle du fournisseur
-Table_Cmde_1st_Indus;date_livraison_previsionnelle_S;Date;Supplier's estimated delivery date;date livraison previsionnelle du fournisseur
-Table_Cmde_1st_Indus;date_reception_effective;Date;Actual date of receipt at Stelia;date reception effective à Stelia
-Table_Cmde_1st_Indus;quantite_receptionnee;Nombre;Quantity received by Stelia;quantite receptionnee par Stelia
-Table_Cmde_1st_Indus;ecart_commande;Nombre;Difference between the order and the quantity received;ecart entre la commande et la quantité réceptionnée
-Table_Cmde_1st_Indus;date_livraison_contractuelle_initiale;Date;Date of initial contractual delivery (without new Stelia liability contract adjustments);date livraison contractuelle initiale (ne prend pas en compte les réajustements de contrat de responsabilité Stelia)
-Table_Cmde_1st_Indus;date_liberation;Date;Release date of the part;date liberation de la pièce
-Table_Cmde_1st_Indus;etat_reference;Texte;State of the part for the current order;etat de la pièce pour la commande en cours
-Table_Cmde_1st_Indus;date_reception_matiere_fournisseur;Date;Date of receipt of the material by the supplier;date reception matiere par le fournisseur
-Table_Cmde_1st_Indus;date_liberation_previsionelle;Date;Estimated release date by Stelia;date liberation previsionelle par Stelia
-Table_Cmde_1st_Indus;quantite_liberee;Nombre;Quantity released by Stelia;quantite liberee par Stelia

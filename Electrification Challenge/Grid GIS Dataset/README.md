@@ -10,15 +10,15 @@ As a strong, diversified, vertically integrated utility, ESB operates right acro
 ## What is the challenge?
 Driving toward a low-carbon future will require the insertion of more and more renewable energy production or electric vehicle charging stations. Grid management relies heavily on geographical models to forecast and locate congestions or assess the impact of connection of a new production or load node.
 
-In practice, grid models can turn out to be quickly outdated especially when it comes to the complex branching of electricity distribution networks. As the physical grid configuration will tend to change more frequently and as the grid model will become more detailed, keeping this model up to date will require advanced tools. To that end, GE Energy Connections develops a new set of software service on Predix dedicated to geographical data management: the Intelligent Mapping service and Dynamic Mapping service.
+The electric grid has been built up over more than a century into today’s network of infrastructure. Utilities themselves don’t have full visibility into the details of the vast infrastructure that has been deployed over the years. As the physical grid configuration will tend to change more frequently and as the grid model will become more detailed, keeping this model up to date will require advanced tools. Help utilities like ESB leverage modern data sources and automation to evaluate their physical infrastructure to enable greater penetration of electric vehicles, renewables, and electrification.
 
-You can find our more here:
+GE Energy Connections develops a new set of software service on Predix dedicated to geographical data management: the Intelligent Mapping service and Dynamic Mapping service. You can find our more here:
 https://sw-intelligent-mapping.github.io/smallworld-mapping-services/
 
 Your mission is to build the prototype for a new tool to visualize and edit a grid model. You can use the grid model sample from ESB and the Intelligent Mapping API to test your solution. You can also combine this data with external data sources.
-For instance you could use
-- a StreetView API to build and update an advanced electrical pillar inventory
-- a satellite view API to build and update a solar panel inventory
+For instance you could use:
+- a StreetView API to build and update an advanced electrical pillar map
+- a satellite view API to build and update a solar panel installation map
 
 
 ## What's in the dataset?

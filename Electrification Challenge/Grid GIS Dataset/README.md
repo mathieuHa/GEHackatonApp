@@ -17,8 +17,8 @@ https://sw-intelligent-mapping.github.io/smallworld-mapping-services/
 
 Your mission is to build the prototype for a new tool to visualize and edit a grid model. You can use the grid model sample from ESB and the Intelligent Mapping API to test your solution. You can also combine this data with external data sources.
 For instance you could use:
-- a StreetView API to build and update an advanced electrical pillar map
-- a satellite view API to build and update a solar panel installation map
+- a StreetView API to build and update an electrical pillar map in your Intelligent Mapping service instance
+- a satellite view API to build and update a map of existing roof mounted solar installations as a new layer in your Intelligent Mapping service instance and calculate the peak power production on a daily basis based on roof orientation, amount of solar installed and weather data
 
 
 ## What's in the dataset?

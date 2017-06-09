@@ -3,9 +3,9 @@
 ## Overview
 The hackathon challenge and all logistics can be found here: https://mindsmachinesberlin.devpost.com/
 
-Completed projects are due at 2pm Tuesday June 13th and must be submitted here: https://mindsmachinesberlin.devpost.com/submissions
+Completed projects are due at **2pm Tuesday June 13th** and must be submitted here: https://mindsmachinesberlin.devpost.com/submissions
 
-This requires you create a devpost account in order to be eligible for a prize.
+This requires you create a devpost account in order to be eligible for a prize. Please make sure you have consulted the requirements that are specific to each challenge / dataset.
 
 Europe is looking to lead the way to decarbonizing its economy and setting a global example. From the energy sector to advanced manufacturing and sustainable energy use, Europe is pushing the boundaries to drive sustainability and deliver better value. Develop new solutions on Predix to take decarbonization to the next level.
 
@@ -23,14 +23,13 @@ Presented by EURELECTRIC and EHPA
 
 Electric vehicles, distributed renewable energy, and electric building heating can drive decarbonization and economic value.  The grid needs to keep up!  Innovate solutions for electrification, and evaluate decarbonization impact. Sample solutions: Renewable energy resource siting; electric heating & conversion to heat pumps analysis; EV charger siting; renewable energy integration.
 
-3 datasets are provided for this challenge. You can find detailed information about one dataset inside its dedicated folder.
+3 datasets are provided for this challenge:
 
-List of datasets:
 - **Grid GIS Dataset** Grid infrastructure mapping
 - **Grid Timeseries Dataset** Load forecasting & temperature correction on distribution circuits
 - **Heatpump Timeseries Dataset** Electric heating & conversion to heat pumps
 
-
+You can find detailed information about one dataset inside its dedicated folder.
 
 ## Advanced Manufacturing Challenge
 

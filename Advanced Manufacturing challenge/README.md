@@ -8,44 +8,44 @@ More info: http://www.stelia-aerospace.com/en/stelia-aerospace/p10-group/
 ## What is the challenge?
 Stelia main activity is to produce Elementary Parts (EP) to be assembled in workpackages of aircraft production programs. One workpackage can involve more than 6000 different EP references. A sequence of 5 activities are involved in EP preparation cycles, each with a specific delivery milestone date:
 
-1.	Design – Designing the definition of the reference - “date_reception_OMP""
-2.	Manufacturing / Engineering – Preparation of the industrialization file for the reference - “date_transmission_proc”
-3.	Procurement – Purchasing the reference from the supplier - “date_affectation”
-4.	Industrialization - Industrialization by the supplier – “date_reelle_livraison_indus”
-5.	Production – Production of the reference by the supplier - "date_liberation"
+1.	**Design** Designing the definition of the reference (performed by Stelia) - “date_reception_OMP""
+2.	**Manufacturing / Engineering** Preparation of the industrialization file for the reference (performed by Stelia) - “date_transmission_proc”
+3.	**Procurement** Purchasing the reference from the supplier (performed by Stelia) - “date_affectation”
+4.	**Industrialization** Industrialization by the supplier (performed by Stelia suppliers) – “date_reelle_livraison_indus”
+5.	**Production** Production of the reference by the supplier (performed by Stelia suppliers) - "date_liberation"
 
 This challenge is about on time delivery (OTD) management. Stelia would strongly benefit from new tools and services to improve the accuracy of Elementary Parts preparation schedules.
-Each EP requires a different processing time depending on its geometrical complexity. The geometrical complexity is measured with an index.
+Each EP requires a different processing time depending on its geometrical complexity. The geometrical complexity is measured with an index (code_filiere).
 
 You can choose between two problematics:
-1. Basic: Build a model to estimate the EP references preparation duration.
-2. Advanced: Build a tool to compute the optimal EP preparation schedule. This is a queue management optimization problem. Please note that to solve this advanced challenge you will need to use the kind of model built from the first sub-challenge (delay estimation model).
+1. **Basic** Build a model to estimate the EP references preparation duration.
+2. **Advanced** Build a tool to compute the optimal EP preparation schedule. This is a queue management optimization problem. Please note that to solve this advanced challenge you will need to use the kind of model built from the first sub-challenge (delay estimation model).
 
 ## Basic - EP preparation milestone date forecast
 
 **Problem description**
 
-Your mission is to build a regression model that will predict the time required to prepare each EP reference. This duration is defined as the time elapsed between the end of design step (date_reception_OMP) and the client delivery date (date_liberation).
+Your mission is to build a regression model that can predict the overall time required to prepare each EP reference called the reference "total cycle duration". This duration is defined as the time elapsed between the end of design step ('date_reception_OMP') and the client delivery date ('date_liberation').
 
 ```
-estimated_duration = date_liberation - date_reception_OMP
+total_cycle_duration = date_liberation - date_reception_OMP
 ```
 
-Currently Stelia is using the last realized preparation duration for each EP and each step to estimate future duration and shape the preparation schedule. Building a model with EP characteristics and full historical preparation duration data as an input could be a first advance for better EP preparation scheduling.
+Currently Stelia is using the last realized cycle duration for each EP and each step to estimate future duration and shape the operations schedule. Building a model with EP characteristics and full historical cycle duration data as an input could be a first advance for better On Time Delivery.
 
 **Data**
 
 The dataset is made of 2 CSV files with realized dates and EP characteristics:
-- a train.csv file that you can use to train your model
-- a test.csv file that you can use to test your model. The output variable (date_liberation) has been removed from the test set.
+- **train.csv** that you can use to train your model
+- **test.csv** that you can use to test your model. The output variable (date_liberation) has been removed from the test set.
 
-In this repo you can also find a data dictionary (fields_description.xlsx).
+In this GitHub repo you can also find a data dictionary (fields_description.xlsx).
 
 **Submission evaluation**
 
 Your submission must include:
-1. Your prototype app deployed on Predix
-2. A CSV file with your estimate of estimated_duration for each references in the testset
+1. Your **prototype app** deployed on Predix. Your app can load the data files we loaded on a shared blobtore (refer to the "how to access the dataset?" section)
+2. A **CSV file** with your estimate of total_cycle_duration for each reference in the testset
 
 Your submitted CSV file should be formatted like this (comma separated):
 ```
@@ -58,7 +58,7 @@ ID,estimate
 
 ```
 
-The error function to be considered for regression model is the standard MSE on duration.
+The error function to be considered for regression model is the standard **mean squared error** (MSE) on total_cycle_duration.
 
 *Bonus point:*
 Use the non-symetric function defined below for regression error. Its purpose is to penalize differently late estimations from early estimations (early is worst).
@@ -70,7 +70,7 @@ With:
 - alpha = 1 if (Yrealized - Yestimate) < 0
 ```
 
-Hint: you can implement a gradient descent model search with this error function using Pytorch or Tensorflow for a gradient descent.
+Hint: you could implement a gradient descent model search with this error function using Pytorch or Tensorflow.
 
 
 ### How to access the dataset?
@@ -82,12 +82,14 @@ Hint: you can implement a gradient descent model search with this error function
 
 
 ## Advanced - EP preparation schedule optimization
+
 Stelia current challenge is a queue management optimization problem. Your mission is to implement a tool that can simulate different scenarios to find the best plan.
+
 Stelia has 4 levels to optimize its operations, with increasing activation cost:
-1. Priorization between references
-2. Modification of planned capacity
-3. Use a fast-lane (very limited capacity)
-4. Inform the client of a delivery date revision
+1. Priorization between references for each preparation step (design / manufacturing / Procurement / Industrialization / Production)
+2. Modification of planned capacity for each preparation step
+3. Use an urgency fast-lane, also called red-wire (fil rouge). This fast-lane has very limited capacity.
+4. Inform the client of a delivery date revision with penalties
 
 The optimization problem can be stated as follows:
 

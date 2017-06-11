@@ -43,7 +43,7 @@ Two problematics are proposed with an increasing level of complexity:
 - **Basic problematic** build a forecast model that can improve the estimation of production time for the variety of references Stelia has to manage
 - **Advanced problematic** build an optimization tool that models Stelia queue management problem to compute the best production schedule
 
-**The jury will be particularly focused on project that tackle the Advanced problematic.**
+**The jury will be particularly focused on projects that tackle the Advanced problematic.**
 
 ## Developer Kit
 

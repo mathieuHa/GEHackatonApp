@@ -101,8 +101,8 @@ Stelia current challenge is a queue management optimization problem. Your missio
 Stelia has 4 levers to optimize its operations, with increasing activation cost:
 1. **Priorization** between references for each preparation step (design / manufacturing / Procurement / Industrialization / Production) i.e. which reference in the queue should be processed first.
 2. **Modification of planned capacity** for each preparation step
-3. Use an urgency fast-lane, also called red-wire (fil rouge). This fast-lane has very limited capacity.
-4. Inform the client of a delivery date revision with penalties
+3. Use an **emergency fast-lane**, also called red-wire (fil rouge). This fast-lane has very limited capacity.
+4. Inform the client of a **delivery date revision** with penalties
 
 **Dataset**
 

@@ -42,6 +42,21 @@ You are provided with two datasets: a train set and a test set. The date_liberat
 
 **Submission evaluation**
 
+Your submission must include:
+1. Your prototype app deployed on Predix
+2. A CSV file with your output estimate for the references in the testset
+
+You CSV file should have the following format (comma separated):
+```
+ID,estimate
+1,3.4
+2,9.3
+3,5.0
+4,1.7
+...
+
+```
+
 The error function to be considered for regression model is the standard MSE on duration.
 
 *Bonus point:*
@@ -58,9 +73,8 @@ Hint: you can implement a gradient descent model search with this error function
 
 
 ### How to access the dataset?
-- The dataset is a set of 3 CSV files that you can download from the Hackathon GitHub repo.
-- This file has been loaded in a blobstore instance that you can access from your app using the following information:
-<<<<<<< HEAD
+- The dataset is made of 2 CSV files (train set / test set) that you can download from the Hackathon GitHub repo.
+- These files have been loaded in a blobstore instance that you can access from your app using the following information:
   - Blobstore URL: https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io
   - *Get* list of files in blobstore : https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io/v1/list
   - *Get* specific file in blobstore : https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io/v1/blob/{FILENAME}
@@ -125,4 +139,3 @@ For each each preparation step queue and each timestep:
 
          `filename=[string]`
    - For more information about interacting with Blobstore : [tutorial](https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=1931&tag=1922&journey=Exploring%20Blobstore) & [documentation](https://docs.predix.io/en-US/content/service/data_management/blobstore/)
->>>>>>> 34c65d150ad3cf86d0f35beb8dab0d8fe0420a1c

@@ -29,7 +29,7 @@ Electric vehicles, distributed renewable energy, and electric building heating c
 - **Grid Timeseries Dataset** Load forecasting & temperature correction on distribution circuits
 - **Heatpump Timeseries Dataset** Electric heating & conversion to heat pumps
 
-You can find detailed information about one dataset inside its dedicated folder.
+You can find detailed information about each dataset inside its dedicated folder.
 
 ## Advanced Manufacturing Challenge
 

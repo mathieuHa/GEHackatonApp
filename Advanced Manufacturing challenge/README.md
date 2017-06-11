@@ -94,6 +94,8 @@ Hint: you could implement a gradient descent model search with this error functi
 
 ## Advanced - EP preparation schedule optimization
 
+**Problem description**
+
 Stelia current challenge is a queue management optimization problem. Your mission is to implement a tool that can simulate different scenarios to find the best plan.
 
 Stelia has 4 levers to optimize its operations, with increasing activation cost:
@@ -102,9 +104,16 @@ Stelia has 4 levers to optimize its operations, with increasing activation cost:
 3. Use an urgency fast-lane, also called red-wire (fil rouge). This fast-lane has very limited capacity.
 4. Inform the client of a delivery date revision with penalties
 
+**Dataset**
+
+For this challenge you can use the dataset presented in the Basic problematic as an illustration but your mission is essentially to build the optimization model.
+
+**Optimization model**
+
 The optimization problem can be stated as follows:
 
-**Assumptions**
+*Assumptions*
+
 - the objective function unit of measure is time (delays)
 - each EP preparation step can be modeled with a queue
 - the timestep granularity is 1 day
@@ -112,16 +121,18 @@ The optimization problem can be stated as follows:
   - set of references to be produced
   - nominal capacity for each preparation step
 
+*Constraints*
 
-**Constraints**
 - each queue has a given processing capacity expressed in number of workers. Each worker can process 35 number of references per week. The notice period to change the number of workers for one step is 8 weeks. Max total capacity increase is 20% of nominal capacity.
 - fast-lane capacity is fixed equal to 10% of planned capacity
 - cost to be added in objective function for revising one date is equal to 1000 * number of overdue days
 
-**Variable**
+*Variable*
 
 For each each preparation step queue and each timestep:
 - list of references in the queue with their priority order
 - the processing capacity
 
 **Submission evaluation**
+
+Your project will be evaluated on the level of complexity (number of constraints / variables) that your model can handle.

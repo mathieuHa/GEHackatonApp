@@ -22,6 +22,8 @@ https://mmeurope-ui-team#.run.aws-usw02-pr.ice.predix.io
 - UserID: TEAM_#
 - User Secret: TEAM_#
 
+**The source code of this app can be found in the "Seed app" folder in this GitHub repo.**
+
 ### MMEurope-ui-intelligent-mapping
 
 We deployed a 'MMEurope-ui-intelligent-mapping' app to show you how to request and plot GIS data stored in the Intelligent Mapping service instance deployed in your team space.
@@ -31,6 +33,8 @@ You can try it (replace # with your team number):
 https://mmeurope-ui-intelligent-mapping-team#.run.aws-usw02-pr.ice.predix.io
 - UserID: TEAM_#
 - User Secret: TEAM_#
+
+**The source code of this app can be found in the "Seed app" folder in this GitHub repo.**
 
 ## SERVICES
 

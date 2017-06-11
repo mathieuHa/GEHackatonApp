@@ -18,35 +18,36 @@ This challenge is about on time delivery (OTD) management. Stelia would strongly
 Each EP requires a different processing time depending on its geometrical complexity. The geometrical complexity is measured with an index.
 
 You can choose between two problematics:
-1. Basic: Build a model to estimate the EP references preparation milestone dates.
+1. Basic: Build a model to estimate the EP references preparation duration.
 2. Advanced: Build a tool to compute the optimal EP preparation schedule. This is a queue management optimization problem. Please note that to solve this advanced challenge you will need to use the kind of model built from the first sub-challenge (delay estimation model).
 
 ## Basic - EP preparation milestone date forecast
 
 **Problem description**
 
-Your mission is to build a regression model that will predict the time required to prepare each EP reference. This duration is defined as the time elapsed between the design start (date_reception_OMP) and delivery date (date_liberation).
+Your mission is to build a regression model that will predict the time required to prepare each EP reference. This duration is defined as the time elapsed between the end of design step (date_reception_OMP) and the client delivery date (date_liberation).
 
 ```
-estimated duration = date_liberation - date_reception_OMP
+estimated_duration = date_liberation - date_reception_OMP
 ```
 
-
-Currently Stelia is using the last realized preparation delays for each EP and each step to estimate future delays and shape the preparation schedule. Building a model with EP characteristics and full historical delay data as an input could be a first advance for better EP preparation scheduling.
+Currently Stelia is using the last realized preparation duration for each EP and each step to estimate future duration and shape the preparation schedule. Building a model with EP characteristics and full historical preparation duration data as an input could be a first advance for better EP preparation scheduling.
 
 **Data**
 
-The dataset is made of 3 tables and a data description file.
-A data dictionary and several tables (references, 1st industrialization) with realized dates and EP characteristics.
-You are provided with two datasets: a train set and a test set. The date_liberation variable have been removed from the test set.
+The dataset is made of 2 CSV files with realized dates and EP characteristics:
+- a train.csv file that you can use to train your model
+- a test.csv file that you can use to test your model. The output variable (date_liberation) has been removed from the test set.
+
+In this repo you can also find a data dictionary (fields_description.xlsx).
 
 **Submission evaluation**
 
 Your submission must include:
 1. Your prototype app deployed on Predix
-2. A CSV file with your output estimate for the references in the testset
+2. A CSV file with your estimate of estimated_duration for each references in the testset
 
-You CSV file should have the following format (comma separated):
+Your submitted CSV file should be formatted like this (comma separated):
 ```
 ID,estimate
 1,3.4

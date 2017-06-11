@@ -6,22 +6,23 @@ STELIA Aerospace offers global solutions for aeronautical manufacturers and airl
 More info: http://www.stelia-aerospace.com/en/stelia-aerospace/p10-group/
 
 ## What is the challenge?
-Stelia main activity is to produce Elementary Parts (EP) to be assembled in workpackages of aircraft production programs. One workpackage can involve more than 6000 different EP references. A sequence of 5 activities are involved in EP preparation cycles, each with a specific delivery milestone date:
+Stelia main activity is to produce Elementary Parts (EP) to be assembled in workpackages of aircraft production programs. One workpackage can involve more than 6000 different EP references. A sequence of 5 activities (steps) are involved in EP preparation cycles, each with a specific delivery milestone date:
 
 1.	**Design** Designing the definition of the reference (performed by Stelia) - “date_reception_OMP""
 2.	**Manufacturing / Engineering** Preparation of the industrialization file for the reference (performed by Stelia) - “date_transmission_proc”
 3.	**Procurement** Purchasing the reference from the supplier (performed by Stelia) - “date_affectation”
-4.	**Industrialization** Industrialization by the supplier (performed by Stelia suppliers) – “date_reelle_livraison_indus”
-5.	**Production** Production of the reference by the supplier (performed by Stelia suppliers) - "date_liberation"
+4.	**Industrialization** Industrialization by the supplier (performed by Stelia's suppliers) – “date_reelle_livraison_indus”
+5.	**Production** Production of the reference by the supplier (performed by Stelia's suppliers) - "date_liberation"
 
-This challenge is about on time delivery (OTD) management. Stelia would strongly benefit from new tools and services to improve the accuracy of Elementary Parts preparation schedules.
-Each EP requires a different processing time depending on its geometrical complexity. The geometrical complexity is measured with an index (code_filiere).
+This challenge is about on time delivery (OTD) management. A variety of unforeseen situations can alter the scheduled operations plan (errors or delays). Also sometimes the priorization strategy for an activity can be in contradiction with the strategy for next activity.
+
+Stelia would strongly benefit from new tools and services to improve the accuracy of its operations schedules and raise alerts when the the schedule needs to be revised.
 
 You can choose between two problematics:
-1. **Basic** Build a model to estimate the EP references preparation duration.
-2. **Advanced** Build a tool to compute the optimal EP preparation schedule. This is a queue management optimization problem. Please note that to solve this advanced challenge you will need to use the kind of model built from the first sub-challenge (delay estimation model).
+1. **Basic** Build a model to estimate the EP references total cycle duration forecast.
+2. **Advanced** Build a tool to compute the optimal EP preparation schedule. This is a queue management optimization problem.
 
-## Basic - EP preparation milestone date forecast
+## Basic - EP total cycle duration forecast
 
 **Problem description**
 
@@ -31,11 +32,13 @@ Your mission is to build a regression model that can predict the overall time re
 total_cycle_duration = date_liberation - date_reception_OMP
 ```
 
-Currently Stelia is using the last realized cycle duration for each EP and each step to estimate future duration and shape the operations schedule. Building a model with EP characteristics and full historical cycle duration data as an input could be a first advance for better On Time Delivery.
+Building a model that takes **EP characteristics** and **full historical cycle duration** data as an input could be a first advance for better On Time Delivery:
+- **EP characteristics** each EP requires a different processing time depending on its geometrical complexity. One measure of EP geometrical complexity is the technocode (code_filiere).
+- **full historical cycle duration** currently Stelia is using the last realized total cycle duration for each EP to estimate future duration and shape the operations schedule
 
-**Data**
+**Dataset**
 
-The dataset is made of 2 CSV files with realized dates and EP characteristics:
+The dataset is made of 2 CSV files covering EP characteristics and realized dates:
 - **train.csv** that you can use to train your model
 - **test.csv** that you can use to test your model. The output variable (date_liberation) has been removed from the test set.
 
@@ -44,10 +47,11 @@ In this GitHub repo you can also find a data dictionary (fields_description.xlsx
 **Submission evaluation**
 
 Your submission must include:
-1. Your **prototype app** deployed on Predix. Your app can load the data files we loaded on a shared blobtore (refer to the "how to access the dataset?" section)
+1. Your **prototype app** deployed on Predix. Your app can access the data files we loaded on a shared blobstore in Predix (refer to the "how to access the dataset?" section)
 2. A **CSV file** with your estimate of total_cycle_duration for each reference in the testset
 
 Your submitted CSV file should be formatted like this (comma separated):
+
 ```
 ID,estimate
 1,3.4
@@ -55,10 +59,9 @@ ID,estimate
 3,5.0
 4,1.7
 ...
-
 ```
 
-The error function to be considered for regression model is the standard **mean squared error** (MSE) on total_cycle_duration.
+The error function to be considered for regression model is the standard **mean squared error** (MSE) on 'total_cycle_duration'.
 
 *Bonus point:*
 Use the non-symetric function defined below for regression error. Its purpose is to penalize differently late estimations from early estimations (early is worst).
@@ -76,9 +79,17 @@ Hint: you could implement a gradient descent model search with this error functi
 ### How to access the dataset?
 - The dataset is made of 2 CSV files (train set / test set) that you can download from the Hackathon GitHub repo.
 - These files have been loaded in a blobstore instance that you can access from your app using the following information:
-  - Blobstore URL: https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io
-  - *Get* list of files in blobstore : https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io/v1/list
-  - *Get* specific file in blobstore : https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io/v1/blob/{FILENAME}
+  - For more information about interacting with Blobstore : [tutorial](https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=1931&tag=1922&journey=Exploring%20Blobstore) & [documentation](https://docs.predix.io/en-US/content/service/data_management/blobstore/)
+  - Blobstore URL : https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io
+  - You can perform the following queries on this URL :
+    - **List files** Returns list of files in blobstore.
+      - **URL** /v1/list
+      - **Method:** 'GET'
+
+    - **Get file** Returns file.
+      - **URL** /v1/blob/:filename
+      - **Method:** 'GET'
+      - **URL Params (Required)** `filename=[string]`
 
 
 ## Advanced - EP preparation schedule optimization
@@ -97,48 +108,15 @@ The optimization problem can be stated as follows:
 - each EP preparation step can be modeled with a queue
 - the timestep granularity is 1 day
 - you can define any initial set of references to be produced
-- fast-lane capacity is fixed equal to 20$ references per day
-- cost of revising one date is 1000$ * delay
+
 
 **Constraints**
-- preparation steps can depend on each other XXX
-- each queue has a given processing capacity expressed in number of references processed per week
+- each queue has a given processing capacity expressed in number of workers. Each worker can process 35 references per week. The notice period to change the number of workers for one step is 1 month.
+- fast-lane capacity is fixed equal to 20% of planned capacity
+- cost of revising one date is 1000$ * number of overdue days
 
 **Variable**
 
 For each each preparation step queue and each timestep:
 - list of references in the queue with their priority order
 - the processing capacity
-=======
-  - URL : https://mmeurope-blob.run.aws-usw02-pr.ice.predix.io
-  - You can also do queries on this URL :
-    - **List files**
-
-      Returns list of files in blobstore.
-
-      * **URL**
-
-        /v1/list
-
-      * **Method:**
-
-        `GET`
-
-    - **Get file**
-
-      Returns file.
-
-       * **URL**
-
-          /v1/blob/:filename
-
-      * **Method:**
-
-        `GET`
-
-      *  **URL Params**
-
-         **Required:**
-
-         `filename=[string]`
-   - For more information about interacting with Blobstore : [tutorial](https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=1931&tag=1922&journey=Exploring%20Blobstore) & [documentation](https://docs.predix.io/en-US/content/service/data_management/blobstore/)

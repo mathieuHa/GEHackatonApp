@@ -5,6 +5,8 @@
 
 Wire your board, experience the Edge, send the data to a cloud app that you can leverage for the Hackathon.   The app is based on the Predix Polymer Web App Starter and Reference App.   This makes it easy to connect to cloud services with API SDKs for major services in various languages.  
 
+The solution comes with a Personal Cloud App get started quickly with a full Front-End and Back-End cloud application, set up of Cloud Services and source code.
+
 ## What is Intel NUC?
 
 The Intel® NUC is a powerful 4x4-inch mini PC with entertainment, gaming, and productivity features, including a customizable board that is ready to accept the memory, storage, and operating systems that you want.

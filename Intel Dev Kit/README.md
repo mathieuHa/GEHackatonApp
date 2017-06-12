@@ -5,7 +5,7 @@
 
 Wire your board, experience the Edge, send the data to a cloud app that you can leverage for the Hackathon.   The app is based on the Predix Polymer Web App Starter and Reference App.   This makes it easy to connect to cloud services with API SDKs for major services in various languages.  
 
-The solution comes with a Personal Cloud App get started quickly with a full Front-End and Back-End cloud application, set up of Cloud Services and source code.
+The solution comes with a Personal Cloud App to get started quickly with a full Front-End and Back-End cloud application, set up of Cloud Services and source code.
 
 ## What is Intel NUC?
 

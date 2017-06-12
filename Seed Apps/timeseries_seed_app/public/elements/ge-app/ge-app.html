@@ -64,12 +64,12 @@
                     <!-- /view1 route and view -->
                     <app-route
                         route="[[_route]]"
-                        pattern="/view-1"
-                        active="{{_view1Active}}">
+                        pattern="/view-grid"
+                        active="{{_viewgridActive}}">
                     </app-route>
                     <px-view
-                        active="[[_view1Active]]"
-                        element-href="./elements/views/view-1.html">
+                        active="[[_viewgridActive]]"
+                        element-href="./elements/views/view-grid.html">
                     </px-view>
 
                     <!-- /view2 route and view -->
@@ -81,6 +81,16 @@
                     <px-view
                         active="[[_view2Active]]"
                         element-href="./elements/views/view-2.html">
+                    </px-view>
+                    <!-- /view2 route and view -->
+                    <app-route
+                        route="[[_route]]"
+                        pattern="/view-intel"
+                        active="{{_viewintelActive}}">
+                    </app-route>
+                    <px-view
+                        active="[[_viewintelActive]]"
+                        element-href="./elements/views/view-intel.html">
                     </px-view>
                 </main>
             </div>
@@ -103,7 +113,7 @@
                     type: Object,
                     value: function () {
                         return {
-                            name: "ge__app",
+                            name: "PrediGE",
                             session: {},
                             version: "1.0"
                         };
@@ -116,12 +126,16 @@
                         return [
                             {
                                 icon: "fa-tachometer",
-                                label: "View 1",
-                                path: "view-1"
+                                label: "Grid",
+                                path: "view-grid"
                             }, {
                                 icon: "fa-file",
                                 label: "View 2",
                                 path: "view-2"
+                            }, {
+                                icon: "fa-file",
+                                label: "Intel",
+                                path: "view-intel"
                             }, {
                                 icon: "fa-sign-out",
                                 label: "Sign out",

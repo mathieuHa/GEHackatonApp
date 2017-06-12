@@ -1,7 +1,7 @@
 {
     "development": {
-        "clientId": "rest_client",
-        "clientSecret": "rest_client",
+        "clientId": "client",
+        "clientSecret": "secret",
         "serverPort": 5000,
         "vcap": {
             "services": {
@@ -23,7 +23,7 @@
                         "name": "uaa-service",
                         "label": "predix-uaa",
                         "credentials": {
-                            "uri": "https://demos-dev.predix-uaa.run.aws-usw02-pr.ice.predix.io"
+                            "uri": "https://bf0a5f62-dc4b-44b3-aeea-3df4297756c0.predix-uaa.run.aws-usw02-pr.ice.predix.io"
                         }
                     }
                 ],
